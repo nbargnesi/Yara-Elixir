@@ -12,7 +12,7 @@ is expected as well.
 
 First run "cmake":
 
-```
+```shell
 $ cmake .
 -- Using OTP lib: /usr/local/Cellar/erlang/23.2.1/lib/erlang/lib - found
 -- Using erl_interface version: erl_interface-4.0.1
@@ -27,7 +27,7 @@ $ cmake .
 
 Then "make":
 
-```
+```shell
 $ make
 [ 50%] Building C object CMakeFiles/YE_NIF_TARGET.dir/shared/yara_elixir.c.o
 [100%] Linking C shared library libyara_elixir.so
@@ -38,7 +38,7 @@ $ make
 
 Use Mix to execute the tests:
 
-```
+```shell
 $ mix test --trace
 
 
