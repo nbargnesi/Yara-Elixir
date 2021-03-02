@@ -21,7 +21,11 @@ jobs:
         path: deps
         key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
         restore-keys: ${{ runner.os }}-mix-
-    - name: Install dependencies
+    - name: Update Apt
+      run: sudo apt update
+    - name: Install Yara
+      run: sudo apt install -y libyara4 libyara-dev
+    - name: Install Elixir dependencies
       run: mix deps.get
     - name: Run tests
       run: mix test
