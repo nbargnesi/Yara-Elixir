@@ -1,0 +1,13 @@
+name: Elixir CI
+
+on: [push, pull_request]
+
+jobs:
+  arch:
+    name: Arch Linux
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use Arch Linux
+        uses: docker://archlinux:latest
+      - name: Install Yara
+        run: pacman -Sy yara
